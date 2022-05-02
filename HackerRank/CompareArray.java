@@ -3,37 +3,44 @@ import java.util.*;
 import java.io.*;
 
 public class CompareArray {
+   
     public static void main(String[] args){
-       int[] a = new int[3];
-     int[] b = new int[3];
-     int arating = 0, brating = 0;
-     Scanner in = new Scanner(System.in);
-     int i,n;
-     for( i = 0, n =0; i < b.length; i++ , n++)
-        { 
-             for(int j =0; j < a.length; j++ ){
-                     a[j] = in.nextInt();
-                   System.out.println(a[j]);
-                     
+        
+        int[] Alice = new int[3];
+      int[] Bob = new int[3];
+      int[] result =new int[2];
+      
+      int AliceRting = 0, BobRting = 0;
+      Scanner in = new Scanner(System.in);
+     // System.out.println(" here");
+      for(int j = 0; j < Alice.length; j++ )
+          Alice[j] = in.nextInt(); 
+      
+		for(int i = 0; i < Bob.length; i++)
+		      Bob[i] = in.nextInt();
+		     
+	
+      for(int i = 0; i < Bob.length; i++){
+    	 // System.out.println(" here");
+             if(Alice[i] > Bob[i]){
+                 AliceRting += 1; 
+             }
+             else  if(Alice[i] < Bob[i]){
+                 BobRting += 1;
              }
              
-            b[i] = in.nextInt();
-            if(a[n] > b[n]){
-                arating += 1; 
-            }
-            else if(a[n] < b[n]){
-                brating += 1;
-                System.out.println(arating);
-            }
-            
-            else if(a[n] == b[n]){
-                System.out.println("[ " + arating + " ," + brating + " ]");
-            }
-            
-        }
-     
+             else {
+            	 AliceRting = AliceRting;
+            	 BobRting = BobRting;
+             }
+         }
+         result[0] = AliceRting;
+         result[1] = BobRting;
+        System.out.println("[" + result[0] + ", " + result[1] + " ]"); 
+             
         }
    
     }
+
 
 
