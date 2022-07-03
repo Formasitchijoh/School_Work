@@ -1,4 +1,4 @@
-package Banking_software;
+package Hackerank;
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -14,42 +14,17 @@ import static java.util.stream.Collectors.toList;
 
 public class Solution {
 
-    public  void plusMinus() {
+	
+	    public static void main(String[] args) throws IOException {
+	        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-    Scanner in = new Scanner(System.in);
-      int numOfInt = in.nextInt();
-      double lesszero = 0.0;
-      double zero =0.0;
-      double greaterzero = 0.0;
-      int[] IntegerArray = new int[numOfInt];
-      
-      for(int i = 0; i < IntegerArray.length; i ++){
-          IntegerArray[i] = in.nextInt();
-           
-           if(IntegerArray[i] < 0)
-               lesszero++;
-           
-           if(IntegerArray[i] == 0)
-                zero++;
-            
-            if(IntegerArray[i] > 0)
-                greaterzero++;
-      }
-      
-      System.out.println(String.format("%.6f", lesszero/numOfInt));
-      System.out.println(String.format("%.6f", zero/numOfInt));
-      System.out.println(String.format("%.6f", greaterzero/numOfInt));
-      
-      in.close();
+	        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+	            .map(Integer::parseInt)
+	            .collect(toList());
 
-    }
+	        Result.miniMaxSum(arr);
 
+	        bufferedReader.close();
+	    }
+	}
 
-
-    public static void main(String[] args) throws IOException {
-       Solution soln = new Solution();
-         soln.plusMinus();
-    }
-}
-
- 
