@@ -6,13 +6,17 @@ public class User {
 	int ID;
 	double amountInAccount;
 	
-		public User(int pin, int id,double deposit) {
+		public User(int pin, int id,double deposit) 
+		{
 		this.PIN = pin;
 		this.ID = id;
 		this.amountInAccount = deposit;
-	}
-		public User(int pin, int id) {
+	       }
+	
+	
+		public User(int pin, int id)
+		{
 			this.PIN = pin;
 			this.ID = id;
 		}
-}
+             }
