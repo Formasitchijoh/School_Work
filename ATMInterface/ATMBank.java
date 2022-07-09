@@ -31,11 +31,10 @@ public void AddUsers(){
 			//the new user into the userArrayaList in the ATMuser Class
 			
 			user = new User(UserPin,UserId, deposit + 230.985);
-			this.users.add(user);
+			this.users.add(user); //Add a new user object into the arrayList
 			System.out.println(" User added successfully  into the system");
 			System.out.println(" ");
-			//System.out.println(this.users.get(i).PIN + " " + this.users.get(i).ID + " " + this.users.get(i).amountInAccount);
-			System.out.println(" ");
+			
 		}
 		
 	}
@@ -63,6 +62,7 @@ public void AddUsers(){
 	return index;
 }
   
+	
   public void withDraw(double amount ,int index) {
 	
 	  
